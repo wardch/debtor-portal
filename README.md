@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PayPathIQ Technical Challenge
 
-## Getting Started
+Minimal UI-only debtor portal built with Next.js, Tailwind CSS, shadcn/ui, and Supabase client wiring.
 
-First, run the development server:
+## What is implemented
+
+- A single-page debtor portal chat UI
+- A fixture-backed account summary using `fixtures/debtor-standard.json`
+- A simple message composer with deterministic canned responses
+- Challenge-aligned outcome hints for pay now, promise to pay, payment arrangement, questions, and human support
+- Supabase environment scaffolding for later persistence work
+
+## What is not implemented
+
+- No real backend logic
+- No database persistence
+- No live LLM routing
+- No payment flow
+
+## Stack
+
+- Next.js App Router
+- Tailwind CSS
+- shadcn/ui components
+- `@supabase/supabase-js`
+
+## Run locally
+
+1. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Copy the example environment file:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the app:
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open `http://localhost:3000`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Supabase is optional for the current UI-only build. If env vars are missing, the app still runs and simply shows Supabase as not configured.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+- `src/app/page.tsx` wires the standard fixture into the main portal UI
+- `src/components/debtor-portal.tsx` contains the page layout, chat state, and canned response behavior
+- `src/lib/supabase/client.ts` provides a browser client factory for later integration
+- `fixtures/` contains the provided debtor account data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This version intentionally stays narrow: it presents the simplest credible web chat portal for the challenge and avoids faking backend behavior beyond canned, explainable UI responses.
