@@ -54,17 +54,13 @@ Your system should turn the message into a clear, structured outcome and route t
 
 ## LLM guidance
 
-In production, we would likely recommend an LLM for translating free-text debtor messages into structured intent and extracted details.
+In production, we would likely recommend an LLM for parsing free-text debtor messages into structured intent and relevant details.
 
-After that, the rest of the flow can be implemented however you think is most appropriate for the product and risk profile. That could be deterministic routing, business rules, workflow state machines, UI-driven branching, human review, or a hybrid approach.
+After that, you can use an LLM again or whatever approach you think is best for the product and risk profile.
 
-You may use an LLM to:
+It matters less which implementation path you choose and more that the system triages debtors effectively, safely, and clearly.
 
-- classify intent
-- extract relevant details
-- recommend a next best action
-
-You do not need to rely on an LLM for the full resolution path. Keep the decisioning controlled and explainable, and include sensible fallback behaviour for low-confidence or ambiguous cases.
+Keep the decisioning controlled and explainable, with sensible fallback behaviour for low-confidence or ambiguous cases.
 
 ## Technical expectations
 
@@ -112,6 +108,7 @@ However, you are responsible for the submission and should be able to explain:
 
 - product and engineering judgment
 - clarity of triage behaviour
+- effectiveness of the triage approach, regardless of implementation style
 - quality of backend logic and data modelling
 - handling of ambiguous input
 - code quality and structure
