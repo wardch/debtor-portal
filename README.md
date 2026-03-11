@@ -15,7 +15,7 @@ A debtor opens the portal and sends a message such as:
 - "This balance is wrong"
 - "Can someone help me?"
 
-Your system should interpret the message and route the debtor into one of these outcomes:
+Your system should turn the message into a clear, structured outcome and route the debtor into one of these paths:
 
 - Pay now
 - Promise to pay
@@ -54,15 +54,17 @@ Your system should interpret the message and route the debtor into one of these 
 
 ## LLM guidance
 
-In production, we would likely use an LLM for intent extraction and information capture from free text.
+In production, we would likely recommend an LLM for translating free-text debtor messages into structured intent and extracted details.
+
+After that, the rest of the flow can be implemented however you think is most appropriate for the product and risk profile. That could be deterministic routing, business rules, workflow state machines, UI-driven branching, human review, or a hybrid approach.
 
 You may use an LLM to:
 
 - classify intent
 - extract relevant details
-- suggest a next best action
+- recommend a next best action
 
-If you do, keep routing controlled and explainable, and include sensible fallback behaviour for low-confidence cases.
+You do not need to rely on an LLM for the full resolution path. Keep the decisioning controlled and explainable, and include sensible fallback behaviour for low-confidence or ambiguous cases.
 
 ## Technical expectations
 
@@ -85,11 +87,13 @@ Submit:
 
 - source code in this repository
 - setup instructions
-- an updated `README.md` that includes a short design note of no more than 800 words covering architecture, tradeoffs, assumptions, and next steps
+- an updated `README.md` that includes a short design note of no more than 800 words covering architecture, tradeoffs, assumptions, and how you would improve, monitor, and evolve the system over time
 - an architecture diagram saved in the repo root as `architecture-diagram.png`, `architecture-diagram.pdf`, or `architecture-diagram.md`
 - tests for the core decision logic
 
 Your `README.md` should link to the architecture diagram if you include one.
+
+Your write-up should explicitly answer the question: how can you improve and monitor this system over time?
 
 ## Use of AI coding tools
 
@@ -111,6 +115,7 @@ However, you are responsible for the submission and should be able to explain:
 - code quality and structure
 - test quality
 - clarity of explanation
+- quality of the suggested iteration path over time
 
 ## Provided input data
 
