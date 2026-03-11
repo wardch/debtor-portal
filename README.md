@@ -87,11 +87,13 @@ Submit:
 
 - source code in this repository
 - setup instructions
+- a deployed version of the application, with the live URL linked from `README.md`
 - an updated `README.md` that includes a short design note of no more than 800 words covering architecture, tradeoffs, assumptions, and how you would improve, monitor, and evolve the system over time
 - an architecture diagram saved in the repo root as `architecture-diagram.png`, `architecture-diagram.pdf`, or `architecture-diagram.md`
 - tests for the core decision logic
 
 Your `README.md` should link to the architecture diagram if you include one.
+Your `README.md` should also link to the deployed application URL.
 
 Your write-up should explicitly answer the question: how can you improve and monitor this system over time?
 
@@ -131,6 +133,8 @@ Current fixtures live in `fixtures/`.
 - Treat your private copy of this repository as the submission artifact
 - When you are finished, invite `wardch` as a collaborator so the submission can be reviewed
 - Keep your write-up in `README.md` so reviewers can find it immediately
+- Deploy the app so reviewers can try it easily. [Vercel](https://vercel.com/) is likely the simplest option for this project, but you may use another hosting approach if you prefer
+- Include the deployed URL prominently in `README.md`
 - Put the architecture diagram in the repo root and reference it from `README.md`
 - If you make reasonable scope cuts, document them clearly
 
