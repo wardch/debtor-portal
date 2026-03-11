@@ -1,0 +1,55 @@
+{
+  "account": {
+    "accountId": "acc_hardship_001",
+    "debtorFirstName": "Aoife",
+    "debtorLastName": "Kelly",
+    "email": "aoife.kelly@example.test",
+    "reference": "WTR-2026-000812",
+    "creditorName": "Example Water Services",
+    "currency": "EUR",
+    "balanceCents": 156200,
+    "status": "overdue",
+    "daysPastDue": 73,
+    "minimumPaymentCents": 1500,
+    "lastPaymentDate": "2025-11-28",
+    "lastPaymentAmountCents": 1500
+  },
+  "billing": {
+    "currentAmountCents": 156200,
+    "lastStatementAmountCents": 148100,
+    "dueDate": "2026-01-03"
+  },
+  "paymentOptions": {
+    "payNowEnabled": true,
+    "promiseToPayEnabled": true,
+    "arrangementEnabled": true,
+    "eligibleArrangementOptions": [
+      {
+        "frequency": "weekly",
+        "installments": 12,
+        "suggestedAmountCents": 13017
+      },
+      {
+        "frequency": "monthly",
+        "installments": 6,
+        "suggestedAmountCents": 26034
+      }
+    ]
+  },
+  "support": {
+    "humanSupportAvailable": true,
+    "supportPhone": "+35318000002",
+    "supportEmail": "support-hardship@example.test"
+  },
+  "faqContext": {
+    "recentStatementReason": "Balance carried forward with late fees applied",
+    "acceptedPaymentMethods": [
+      "card",
+      "bank_transfer"
+    ]
+  },
+  "riskFlags": {
+    "financialHardshipMentioned": true,
+    "preferHumanReview": true
+  }
+}

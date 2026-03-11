@@ -1,0 +1,51 @@
+{
+  "account": {
+    "accountId": "acc_standard_001",
+    "debtorFirstName": "Jane",
+    "debtorLastName": "Murphy",
+    "email": "jane.murphy@example.test",
+    "reference": "EI-2026-000123",
+    "creditorName": "Example Energy Ireland",
+    "currency": "EUR",
+    "balanceCents": 128500,
+    "status": "overdue",
+    "daysPastDue": 47,
+    "minimumPaymentCents": 2500,
+    "lastPaymentDate": "2026-01-10",
+    "lastPaymentAmountCents": 5000
+  },
+  "billing": {
+    "currentAmountCents": 128500,
+    "lastStatementAmountCents": 116000,
+    "dueDate": "2026-01-24"
+  },
+  "paymentOptions": {
+    "payNowEnabled": true,
+    "promiseToPayEnabled": true,
+    "arrangementEnabled": true,
+    "eligibleArrangementOptions": [
+      {
+        "frequency": "weekly",
+        "installments": 6,
+        "suggestedAmountCents": 21500
+      },
+      {
+        "frequency": "monthly",
+        "installments": 3,
+        "suggestedAmountCents": 42834
+      }
+    ]
+  },
+  "support": {
+    "humanSupportAvailable": true,
+    "supportPhone": "+35318000000",
+    "supportEmail": "support@example.test"
+  },
+  "faqContext": {
+    "recentStatementReason": "Higher winter usage and one missed direct debit",
+    "acceptedPaymentMethods": [
+      "card",
+      "bank_transfer"
+    ]
+  }
+}

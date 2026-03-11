@@ -1,0 +1,43 @@
+{
+  "account": {
+    "accountId": "acc_dispute_001",
+    "debtorFirstName": "Patrick",
+    "debtorLastName": "Byrne",
+    "email": "patrick.byrne@example.test",
+    "reference": "TEL-2026-000441",
+    "creditorName": "Example Telecom",
+    "currency": "EUR",
+    "balanceCents": 89400,
+    "status": "overdue",
+    "daysPastDue": 32,
+    "minimumPaymentCents": 2000,
+    "lastPaymentDate": "2025-12-19",
+    "lastPaymentAmountCents": 3000
+  },
+  "billing": {
+    "currentAmountCents": 89400,
+    "lastStatementAmountCents": 47200,
+    "dueDate": "2026-02-07"
+  },
+  "paymentOptions": {
+    "payNowEnabled": true,
+    "promiseToPayEnabled": true,
+    "arrangementEnabled": true
+  },
+  "support": {
+    "humanSupportAvailable": true,
+    "supportPhone": "+35318000001",
+    "supportEmail": "billing-disputes@example.test"
+  },
+  "faqContext": {
+    "recentStatementReason": "Includes roaming charges and an early contract termination fee",
+    "acceptedPaymentMethods": [
+      "card",
+      "bank_transfer"
+    ]
+  },
+  "riskFlags": {
+    "disputeOpen": false,
+    "requiresHumanForBillingChallenge": true
+  }
+}
