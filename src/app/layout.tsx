@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PayPathIQ Debtor Portal",
+  title: "Debtor Portal",
   description:
-    "A minimal debtor self-service chat portal for the PayPathIQ technical challenge.",
+    "A minimal debtor self-service chat portal challenge starter.",
 };
 
 export default function RootLayout({

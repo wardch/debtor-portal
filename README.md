@@ -1,4 +1,4 @@
-# PayPathIQ Technical Challenge
+# Debtor Portal Challenge
 
 Continue building this repo into a small but production-minded debtor portal chat experience that helps a debtor resolve their account.
 
@@ -120,9 +120,11 @@ Current fixtures live in `fixtures/`.
 
 ## Submission notes
 
-- Create your own private repository from this starter before you begin; do not push your submission to the shared source repository
-- If you use GitHub, prefer creating a private repo from a template or a private fork if your org allows it
+- Use the GitHub `Use this template` button to create your own repository from this starter before you begin
+- Set the new repository visibility to `Private`
+- Do not push your submission to the shared source repository
 - Treat your private copy of this repository as the submission artifact
+- When you are finished, invite `wardch` as a collaborator so the submission can be reviewed
 - Keep your write-up in `README.md` so reviewers can find it immediately
 - Put the architecture diagram in the repo root and reference it from `README.md`
 - If you make reasonable scope cuts, document them clearly
