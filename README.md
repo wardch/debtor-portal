@@ -1,105 +1,36 @@
-# PayPathIQ Technical Challenge
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Build a small but production-minded debtor portal `web chat` that helps a debtor resolve their account.
+## Getting Started
 
-## Tech Constraints
+First, run the development server:
 
-- Frontend must use `Next.js` and `React`
-- Backend can use `Next.js`, `Node.js`, or `Python`
-- Use a database for persistence
-- `Supabase` is recommended
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## The Task
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-A debtor opens the portal and sends a message such as:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- "I can pay this now"
-- "I can pay next Friday"
-- "I need a payment plan"
-- "Why is this amount different from last month?"
-- "This balance is wrong"
-- "Can someone help me?"
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Your system should interpret the message and route the debtor into one of these outcomes:
+## Learn More
 
-- `Pay now`
-- `Promise to pay`
-- `Payment arrangement`
-- `Question`
-- `Dispute or human support`
+To learn more about Next.js, take a look at the following resources:
 
-## Minimum Expected Behaviour
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- `Pay now`
-  - detect immediate payment intent
-  - route to a mocked or sandbox payment flow
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- `Promise to pay`
-  - detect a single future payment commitment
-  - capture at least a payment date
-  - show a confirmation summary
+## Deploy on Vercel
 
-- `Payment arrangement`
-  - detect intent to pay over time
-  - capture a simple proposed arrangement
-  - show a confirmation summary
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- `Question`
-  - answer a relevant account question using the provided account context
-  - then steer the debtor back toward resolution where appropriate
-
-- `Dispute or human support`
-  - route disputes, sensitive issues, or unclear/high-risk cases to human review
-  - do not attempt full automated resolution for these
-
-## LLM Guidance
-
-In production, we would likely use an LLM for intent extraction and information capture from free text.
-
-You may use an LLM to:
-
-- classify intent
-- extract relevant details
-- suggest a next best action
-
-If you do, keep routing controlled and explainable, and include sensible fallback behaviour for low-confidence cases.
-
-## Deliverables
-
-Submit:
-
-- source code
-- setup instructions
-- a short README covering architecture, tradeoffs, assumptions, and next steps
-- tests for core decision logic
-
-## Use Of AI Coding Tools
-
-You may use tools such as `Claude Code`, `Codex`, `Cursor`, or similar. We encourage effective use of these tools.
-
-However, you are responsible for the submission and should be able to explain:
-
-- how the system works
-- the key design decisions
-- where AI tools helped
-- what you reviewed or changed yourself
-
-## What We Are Evaluating
-
-- product and engineering judgment
-- clarity of triage behaviour
-- quality of backend logic and data modelling
-- handling of ambiguous input
-- code quality and structure
-- test quality
-- clarity of explanation
-
-## Provided Input Data
-
-Sample debtor account context is provided in `fixtures/`.
-
-- `fixtures/debtor-standard.json`
-- `fixtures/debtor-dispute.json`
-- `fixtures/debtor-hardship.json`
-
-Use these fixtures to drive your chat experience. You may extend the schema if needed, but explain any changes.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
