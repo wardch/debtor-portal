@@ -2,6 +2,36 @@
 
 Continue building this repo into a small but production-minded debtor portal chat experience that helps a debtor resolve their account.
 
+## Start here
+
+The easiest way to get set up is to create your own private copy of this repo first, then run it locally:
+
+1. On GitHub, click the green `Use this template` button.
+2. Create a new repository from this template.
+3. Set the new repository visibility to `Private`.
+4. Clone your new repository to your machine.
+5. `cd` into the repository.
+6. Run `pnpm i`.
+7. Run `pnpm dev`.
+8. Open `http://localhost:3000` in your browser, or use the next available port shown by Next.js.
+
+## UI preview
+
+This is what the starter UI looks like before you begin extending it:
+
+![Starting Debtor Portal UI](./public/readme-images/ui-dashboard-start.png)
+
+## Recommended: deploy to Vercel immediately
+
+It is worth wiring up deployment before you start building so you always have a live URL to test and share.
+
+1. Create a Vercel account at [vercel.com](https://vercel.com/) if you do not already have one.
+2. In Vercel, click `Add New...` and choose `Project`.
+3. Import the GitHub repository you created from this template.
+4. Review the default settings and click `Deploy`.
+5. Once deployment finishes, use the live URL to verify the app is up.
+6. After that, every push to GitHub will automatically trigger an updated Vercel deployment.
+
 ## The task
 
 Use the existing implementation in this repository as your starting point. You should extend it into a simple but credible debtor self-service flow.
@@ -28,7 +58,7 @@ Your system should turn the message into a clear, structured outcome and route t
 ### Pay now
 
 - Detect immediate payment intent
-- Route to a mocked or sandbox payment flow
+- Route to a mocked or sandbox payment flow. [Stripe](https://stripe.com/) is a straightforward option if you want to simulate a test payment in a sandbox environment, otherwise a mocked payment flow is also fine.
 
 ### Promise to pay
 
@@ -39,6 +69,7 @@ Your system should turn the message into a clear, structured outcome and route t
 ### Payment arrangement
 
 - Detect intent to pay over time
+- For example, a debtor might pay 50% now and the remaining 50% over a fixed schedule such as 3 weekly or monthly installments
 - Capture a simple proposed arrangement
 - Show a confirmation summary
 
@@ -50,6 +81,7 @@ Your system should turn the message into a clear, structured outcome and route t
 ### Dispute or human support
 
 - Route disputes, sensitive issues, or unclear or high-risk cases to human review
+- A simple acknowledgement is enough here, for example: "Thanks for flagging this. I'm handing this off to a colleague who can help, and we'll be in touch soon with an update."
 - Do not attempt full automated resolution for these cases
 
 ## LLM guidance
@@ -85,7 +117,7 @@ Submit:
 - setup instructions
 - a deployed version of the application, with the live URL linked from `README.md`
 - an updated `README.md` that includes a short design note of no more than 800 words covering architecture, tradeoffs, assumptions, and how you would improve, monitor, and evolve the system over time
-- an architecture diagram saved in the repo root as `architecture-diagram.png`, `architecture-diagram.pdf`, or `architecture-diagram.md`
+- an architecture diagram saved in the repo root as `architecture-diagram.png`, `architecture-diagram.pdf`, or `architecture-diagram.md`. This can be a hand-drawn picture or something made in a free tool like [Excalidraw](https://excalidraw.com/); it does not need to be perfect, it just needs to illustrate the overall system clearly
 - tests for the core decision logic
 
 Your `README.md` should link to the architecture diagram if you include one.
@@ -130,34 +162,10 @@ Current fixtures live in `fixtures/`.
 - Treat your private copy of this repository as the submission artifact
 - When you are finished, invite `wardch` as a collaborator so the submission can be reviewed
 - Keep your write-up in `README.md` so reviewers can find it immediately
-- Deploy the app so reviewers can try it easily. [Vercel](https://vercel.com/) is likely the simplest option for this project, but you may use another hosting approach if you prefer
+- Deploy the app with [Vercel](https://vercel.com/) so reviewers can try it easily
 - Include the deployed URL prominently in `README.md`
 - Put the architecture diagram in the repo root and reference it from `README.md`
 - If you make reasonable scope cuts, document them clearly
-
-## Run locally
-
-1. Install dependencies:
-
-```bash
-pnpm install
-```
-
-2. Copy the example environment file:
-
-```bash
-cp .env.example .env.local
-```
-
-3. Start the app:
-
-```bash
-pnpm dev
-```
-
-4. Open `http://localhost:3000`
-
-If Supabase env vars are missing, the app still runs with the current local fixture setup.
 
 Use the `Conversations` section in the portal UI to see the AI messaging flow on the frontend. The backend/API for real message processing is not implemented yet.
 
